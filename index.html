@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo taxa e Saldo devedor</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <style>
+    th{
+        font-size: 30px;
+        color: black;
+        font-family: verdana;
+        text-align: center;
+        background-color: rgb(54, 226, 48);
+        border-radius: 20px;
+} 
+    tr{
+        font-size: 20px;
+        color: black;
+        font-family: verdana;
+        text-align: right;
+    }
+    table{
+        text-align: center;
+        margin: auto;
+        border-radius: 20px;
+    }
+    td{
+        text-align: right;
+
+        
+    }      
+    div{
+        text-align: center;
+        margin: 5px;
+        
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <form>     <!-- campo para inclusão das informações de taxa -->
+        <table border="5">
+            <tr>
+                <th colspan="1">Cálculo de taxa</th> 
+            </tr>
+            <tr>
+                <td> Quantidade de parcelas: <input type="number" name="qtde" id="qtde" ></td> 
+            </tr>
+            <tr>
+                <td> Valor das parcelas: <input type="number" name="parcela" id="parcela" ></td>
+            </tr>
+            <tr>
+                <td> Valor do contrato: <input type="number" name="totalcontrato" id="totalcontrato" ></td>
+            </tr>
+            <tr>
+                <td> Data do contrato: <input type="date" name="datact" id="datact" ></td>
+            </tr>
+            <tr>
+                <td>  
+                       <div>
+                            <input type="button" value="Calcular" onclick="calculartaxa();"name="" >
+                       </div> 
+                </td>
+            </tr>
+            <tr>
+                <td> Valor contrato com IOF <input type="text" name="contratocomiof" id="contratocomiof" ></td>
+            </tr>
+            <tr>
+                <td> Taxa de Juros <input type="text" name="taxa" id="taxa" ></td>
+            </tr>
+        </table>
+        <table border="5">
+            <tr>
+                <th colspan="1">Cálculo Saldo Devedor</th>
+            </tr>
+                        <tr>
+                <td> Parcelas Pagas: <input type="number" name="pcpg" id="pcpg" ></td>
+            </tr>
+            <tr>
+                <td> Dias corridos do contrato: <input type="number" name="diac" id="diac" ></td>
+            </tr>
+            <tr>
+                <td> Parcelas em aberto: <input type="number" name="pcab" id="pcab" ></td>
+            </tr>
+            <tr>
+                <td> Data atual: <input type="date, "DD/MM/YYY"" name="datahj" id="datahj" ></td>
+            </tr>
+            <tr>
+                <td> Valor presente <input type="number" name="vp" id="vp" ></td>
+            </tr>
+            <tr>
+                <td> Valor presente C/ IOF <input type="number" name="vpciof" id="vpciof" ></td>
+            </tr>
+
+        </table>
+    </form>
+    
+</body>
+</html>
