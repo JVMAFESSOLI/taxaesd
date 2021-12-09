@@ -38,31 +38,46 @@
 
      // definindo as PARCELAS PAGAS
         
-       (function variacaoDias(){
-        var dataContrato = new Date(document.getElementById("datact"));
-        var datahj1 = new Date(dataAtual)
+       
+        var dataContrato = document.getElementById("datact").value;
+        var datahj1 = new Date(dataAtual, "dd/mm/yyyy");
+        var parcelasPagas = document.getElementById("pcpg");
 
         var diffInTime = Math.abs(datahj1 - dataContrato)
         var timeInOneDay = 1000 * 60 * 60 * 24
         var diffInDays = diffInTime / timeInOneDay
 
-        var d1 = new Date(dataAtual, "DD/MM/AAAA")
-        var d2 = new Date(dataContrato, "DD/MM/AAAA")
+        var d1 = dataContrato
+        var d2 = datahj.value
 
-        var diff = moment(d2, "DD/MM/YYYY").diff(moment(d1, "DD/MM/YYYY"));
+        var diff = new Date(moment(d2, "DD/MM/YYYY").diff(moment(d1, "DD/MM/YYYY")));
 
-        var meses = moment.duration(diff).asMonths();
+        var meses = parseInt(moment.duration(diff).asMonths());
 
-        console.log(meses)
-        console.log(diffInDays)
+        parcelasPagas.value = meses
+
+    // definindo as PARCELAS EM ABERTO
+
+        var parcelasEmAberto = document.getElementById("pcab");
+        var emAberto = (qtde - meses)
         
+        parcelasEmAberto.value = emAberto
 
+    // definindo o VALOR PRESENTE
+            // VP = VF / (1 + I) ^ N
+        var vp = document.getElementById("vp");
+        taxaNominal = (rate / 100)
+        
+        var saldoDevedor = parcela * ((1 - (1 + taxaNominal) ** -(emAberto)) / taxaNominal)
 
-        }) ()
-
+        vp.value = saldoDevedor
+    
+    
     
     }
 
 
+
+    
 
     
