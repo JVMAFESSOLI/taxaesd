@@ -57,14 +57,9 @@
                 <td> Valor do contrato: <input type="number" name="totalcontrato" id="totalcontrato" ></td>
             </tr>
             <tr>
-                <td> Data do contrato: <input type="date" name="datact" id="datact" ></td>
+                <td> Data do contrato: <input type="date, "DD/MM/YYYY"" name="datact" id="datact" ></td>
             </tr>
             <tr>
-                <td>  
-                       <div>
-                            <input type="button" value="Calcular" onclick="calculartaxa();"name="" >
-                       </div> 
-                </td>
             </tr>
             <tr>
                 <td> Valor contrato com IOF <input type="text" name="contratocomiof" id="contratocomiof" ></td>
@@ -74,14 +69,18 @@
             </tr>
         </table>
         <table border="5">
+            <td>  
+                <div>
+                     <input type="button" value="Calcular" onclick="calculartaxa();"name="" >
+                </div> 
+         </td>
+        </table>
+        <table border="5">
             <tr>
                 <th colspan="1">Cálculo Saldo Devedor</th>
             </tr>
                         <tr>
                 <td> Parcelas Pagas: <input type="number" name="pcpg" id="pcpg" ></td>
-            </tr>
-            <tr>
-                <td> Dias corridos do contrato: <input type="number" name="diac" id="diac" ></td>
             </tr>
             <tr>
                 <td> Parcelas em aberto: <input type="number" name="pcab" id="pcab" ></td>
@@ -90,11 +89,9 @@
                 <td> Data atual: <input type="date, "DD/MM/YYY"" name="datahj" id="datahj" ></td>
             </tr>
             <tr>
-                <td> Valor presente <input type="number" name="vp" id="vp" ></td>
+                <td> Saldo Devedor: <input type="number" name="vp" id="vp" ></td>
             </tr>
-            <tr>
-                <td> Valor presente C/ IOF <input type="number" name="vpciof" id="vpciof" ></td>
-            </tr>
+            
 
         </table>
     </form>
