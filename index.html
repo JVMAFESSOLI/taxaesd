@@ -7,59 +7,34 @@
     <title>Cálculo taxa e Saldo devedor</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
-    <style>
-    th{
-        font-size: 30px;
-        color: black;
-        font-family: verdana;
-        text-align: center;
-        background-color: rgb(54, 226, 48);
-        border-radius: 20px;
-} 
-    tr{
-        font-size: 20px;
-        color: black;
-        font-family: verdana;
-        text-align: right;
-    }
-    table{
-        text-align: center;
-        margin: auto;
-        border-radius: 20px;
-    }
-    td{
-        text-align: right;
+    <link href="style.css" rel="stylesheet">
 
-        
-    }      
-    div{
-        text-align: center;
-        margin: 5px;
-        
-    }
-    
-    
-    </style>
 </head>
 <body>
-    <form>     <!-- campo para inclusão das informações de taxa -->
-        <table border="5">
+    <form>     
+        <!-- campo para inclusão das informações de taxa -->
+        <table>
             <tr>
                 <th colspan="1">Cálculo de taxa</th> 
             </tr>
             <tr>
-                <td> Quantidade de parcelas: <input type="number" name="qtde" id="qtde" ></td> 
+                <td> Quantidade de parcelas: <input type="number" name="qtde" id="qtde" placeholder="ex: 24" ></td> 
             </tr>
             <tr>
-                <td> Valor das parcelas: <input type="number" name="parcela" id="parcela" ></td>
+                <td> Valor das parcelas: <input type="number" name="parcela" id="parcela" placeholder="100,00"></td>
             </tr>
             <tr>
-                <td> Valor do contrato: <input type="number" name="totalcontrato" id="totalcontrato" ></td>
+                <td> Valor do contrato: <input type="number" name="totalcontrato" id="totalcontrato" placeholder="1.000,00" ></td>
             </tr>
             <tr>
-                <td> Data do contrato: <input type="date, "DD/MM/YYYY"" name="datact" id="datact" ></td>
+                <td> Data do contrato: <input type="date, "DD/MM/YYYY"" name="datact" id="datact" placeholder="01/01/2021"></td>
             </tr>
             <tr>
+                <td>  
+                    <div class="botao">
+                         <input type="button" value="Calcular" onclick="calculartaxa();"name="button" style="width:500px;height:30px;" >
+                    </div> 
+             </td>
             </tr>
             <tr>
                 <td> Valor contrato com IOF <input type="text" name="contratocomiof" id="contratocomiof" ></td>
@@ -68,14 +43,10 @@
                 <td> Taxa de Juros <input type="text" name="taxa" id="taxa" ></td>
             </tr>
         </table>
-        <table border="5">
-            <td>  
-                <div>
-                     <input type="button" value="Calcular" onclick="calculartaxa();"name="" >
-                </div> 
-         </td>
+        <table>
+            
         </table>
-        <table border="5">
+        <table>
             <tr>
                 <th colspan="1">Cálculo Saldo Devedor</th>
             </tr>
@@ -89,7 +60,7 @@
                 <td> Data atual: <input type="date, "DD/MM/YYY"" name="datahj" id="datahj" ></td>
             </tr>
             <tr>
-                <td> Saldo Devedor: <input type="number" name="vp" id="vp" ></td>
+                <td> Saldo Devedor: <input type="text" name="vp" id="vp" ></td>
             </tr>
             
 
