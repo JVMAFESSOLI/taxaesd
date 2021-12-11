@@ -69,15 +69,15 @@
         taxaNominal = (rate / 100)
         
         var saldoDevedor = parcela * ((1 - (1 + taxaNominal) ** -(emAberto)) / taxaNominal)
+        
+        var valorFormatado = saldoDevedor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'});
 
-        vp.value = saldoDevedor
+        vp.value = valorFormatado
     
     
     
     }
 
 
-
-    
 
     
