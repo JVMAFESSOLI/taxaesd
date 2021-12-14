@@ -33,8 +33,10 @@ table{
     border-radius: 20px;
     display: auto;
     border: 10px;
+    position: auto;
     min-width: 320px;
     max-width: 800px;
+
 }
 input{
     border-radius: 20px;
@@ -56,6 +58,7 @@ body{
     margin:0;
 
 }
+
 .observacao{
     font-size: 10px;
     text-align: center;
@@ -69,4 +72,5 @@ body{
     bottom: 0px; 
     left: 0px; 
     text-align: center; 
+
 }
