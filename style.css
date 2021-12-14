@@ -33,7 +33,8 @@ table{
     border-radius: 20px;
     display: auto;
     border: 10px;
-    
+    min-width: 320px;
+    max-width: 800px;
 }
 input{
     border-radius: 20px;
